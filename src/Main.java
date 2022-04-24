@@ -3,20 +3,14 @@ import java.util.Arrays;
 
 public class Main {
     //ЗАДАЧА 1
-    public static void isLeapYear() {
-        int year = 1960;
+    public static void isLeapYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " Year is leap!");
         } else {
             System.out.println(year + " Year is not leap!");
         }
-       
-    }
-
-
     //ЗАДАЧА 2
-    public static void Sys() {
-        int clientOs = 1;
+    public static void Sys(int clientOs) {
         int currentYear = LocalDate.now().getYear();
         if (currentYear >= 2015 && clientOs == 1) {
             System.out.println("Install version of app for Android by link"); //Стандартная установка для андроида
@@ -29,13 +23,8 @@ public class Main {
         } else if (currentYear < 2015 && clientOs < 1) {
             System.out.println("Install the light version of app for iOS by link");//Облегченная iOS
         }
-       
-    }
-
-
     //ЗАДАЧА 3
-    public static char delivery() {
-        char deliveryDistance = 95;
+    public static char delivery(char deliveryDistance) {
         if (deliveryDistance < 20) {
             System.out.println("It will take 1 day");
         } else if ((deliveryDistance >= 20) && (deliveryDistance < 60)) {
@@ -47,8 +36,7 @@ public class Main {
     }
 
     //ЗАДАЧА 4
-    public static void doubles() {
-        String str = "aabccddefgghiijjkk.";
+    public static void doubles(String str) {
         char[] carray = str.toCharArray();
         System.out.println("The string is:" + str);
         System.out.print("Duplicate Characters in above string are: ");
@@ -64,8 +52,7 @@ public class Main {
     }
 
     //ЗАДАЧА 5
-    public static void reverse() {
-        int massiv[] = new int[]{3, 2, 1, 1, 4};
+    public static void reverse(int massiv[]) {
         int vremennyMassiv[] = new int[massiv.length];
         for(int i=0;i<massiv.length;i++)
         {
@@ -80,10 +67,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        isLeapYear();
-        Sys();
-        delivery();
-        doubles();
-        reverse();
+        isLeapYear(1960);
+        Sys(1);
+        delivery((char) 95);
+        doubles("aabccddefgghiijjkk.");
+        reverse(new int[]{3, 2, 1, 1, 4});
     }
 }
