@@ -10,7 +10,7 @@ public class Main {
         } else {
             System.out.println(year + " Year is not leap!");
         }
-        return;
+       
     }
 
 
@@ -29,7 +29,7 @@ public class Main {
         } else if (currentYear < 2015 && clientOs < 1) {
             System.out.println("Install the light version of app for iOS by link");//Облегченная iOS
         }
-        return;
+       
     }
 
 
